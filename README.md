@@ -25,7 +25,9 @@ Using the Application
 ---------------------
 ### Request
 API Endpoint: http://localhost:3000/dev
+
 Method: `POST`
+
 Body:
 ```json
 {"url": "https://example.com"}
