@@ -21,6 +21,38 @@ To start the application, need to run following:
 docker-compose up
 ```
 
+Using the Application
+---------------------
+### Request
+API Endpoint: http://localhost:3000/dev
+Method: `POST`
+Body:
+```json
+{"url": "https://example.com"}
+``` 
+(Change the `url` with the website name)
+
+### Response
+```json
+{
+  "website": {
+    "about": ["...."],
+    "social_medias": {
+      "facebook": "https://facebook.com/company",
+      "twitter": "https://twitter.com/company",
+      "linkedin": "https://www.linkedin.com/company/name"
+    }
+  },
+  "twitter": {
+    "link": "https://twitter.com/company",
+    "following": "1000",
+    "followers": "2000",
+    "about": ".....",
+    "location": "....",
+    "joined": "Joined June 2010"
+  }
+}
+```
 System Diagram
 -------
 ![diagram.png](diagram.png)

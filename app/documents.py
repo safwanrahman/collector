@@ -43,3 +43,8 @@ class LinkedinDocument(Document):
 
 
 search_index = Index(name="data-*")
+
+document_classes = [WebsiteDocument, TwitterDocument, FacebookDocument, LinkedinDocument]
+
+for document in document_classes:
+    document.init()

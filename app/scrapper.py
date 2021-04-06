@@ -46,7 +46,7 @@ class WebsiteScrapper:
                     return tag["href"]
 
     def get_url_or_none(self, name):
-        obj = self._bs4_object.find(href=re.compile(name))
+        obj = self._bs4_object.find('a', href=re.compile(name))
         if obj:
             return obj["href"]
 
@@ -83,8 +83,8 @@ class WebsiteScrapper:
 
     def get_twitter_page_content(self):
         url = self.get_twitter_url()
-        webdriver = self.webdriver
         if url:
+            webdriver = self.webdriver
             webdriver.get(url)
             time.sleep(5)
             return webdriver.page_source
